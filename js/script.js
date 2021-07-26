@@ -129,4 +129,38 @@ const renderIcons = (arr, targetElement) => {
 };
 
 
+//sezione filtri
+
+const selectField = document.getElementById('type-filter');
+
+selectField.addEventListener('change', () => {
+    const filterValue = selectField.value;
+
+    if (filterValue === 'all') {
+        renderIcons(icons, iconSection);
+        return;
+    }
+
+    const filteredIcons = icons.filter((icon) => {
+
+        if (filterValue === icon.type) {
+            return true;
+        }
+
+    });
+    renderIcons(filteredIcons, iconSection);
+});
+
+
+
+
+
+//STAMPO IN PAGINA
+const iconSection = document.querySelector('#icons .row');
+renderIcons(icons, iconSection);
+
+
+
+
+
 

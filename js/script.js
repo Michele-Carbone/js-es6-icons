@@ -153,6 +153,25 @@ selectField.addEventListener('change', () => {
 
 
 
+const renderOptions = (iconsArray, targetElement) => {
+
+    const iconTypes = [];
+    iconsArray.forEach((icon) => {
+        if (!iconTypes.includes(icon.type)) {
+            iconTypes.push(icon.type);
+        }
+    });
+
+    console.log('iconType:', iconTypes);
+
+    let options = '<option selected value="all">All</option>';
+    iconTypes.forEach((type) => {
+        options += `<option value="${type}">${type}</option>`;
+    });
+
+    targetElement.innerHTML = options;
+}
+
 
 
 //STAMPO IN PAGINA
@@ -160,7 +179,7 @@ const iconSection = document.querySelector('#icons .row');
 renderIcons(icons, iconSection);
 
 
-
+renderOptions(icons, selectField);
 
 
 

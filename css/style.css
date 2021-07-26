@@ -22,9 +22,15 @@ main{
 }
 
 .animal{
-    color: cornflowerblue;
+    color: rgb(27, 3, 241);
 }
 
 .vegetable{
-    color: goldenrod;
+    color: rgb(250, 145, 8);
 }
+
+.user{
+    color: indigo;
+}
+
+

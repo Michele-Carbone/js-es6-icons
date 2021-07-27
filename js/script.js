@@ -116,7 +116,7 @@ const renderIcons = (arr, targetElement) => {
 
         iconsTemplate += `
         <div class="col col-sml-4 col-md-2 m-3 ${hasOffset}">
-            <div class="card rounded-3">
+            <div class="card rounded-3 h-100">
                 <div class="card-body">
                     <i class="fas ${icon.preferix}${icon.name} fa-2x ${icon.type}"></i>
                     <h2 class="h6">${icon.name.toUpperCase()}</h2>
